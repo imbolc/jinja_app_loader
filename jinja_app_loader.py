@@ -6,7 +6,6 @@ from logging import getLogger
 from jinja2 import BaseLoader, TemplateNotFound
 
 
-__version__ = '1.0.0'
 log = getLogger(__name__)
 
 

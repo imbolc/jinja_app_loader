@@ -8,8 +8,6 @@ try:
 except ImportError:
     pandoc = None
 
-import jinja_app_loader as pkg
-
 
 if sys.argv[-1] == 'publish':
     assert pandoc, 'You have to do: pip install pyandoc'
@@ -28,17 +26,16 @@ def get_description():
     return short, desc
 
 
-name = pkg.__name__
+name = 'jinja_app_loader'
 short, desc = get_description()
 setup(
-    version=pkg.__version__,
+    version='1.0.2',
     name=name,
     url='https://github.com/imbolc/{}'.format(name),
     description=short,
     long_description=desc,
 
     py_modules=[name],
-    install_requires=['jinja2'],
 
     author='Imbolc',
     author_email='imbolc@imbolc.name',
